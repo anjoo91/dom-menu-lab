@@ -67,6 +67,6 @@ menuLinks.forEach(function(menuLink) {
     let a = document.createElement("a"); //Create an <a> element
     a.href = menuLink.href; //Add href attribute to <a> & set value to menuLink.href
     a.textContent = menuLink.text; //Sets <a>'s content to value of menuLink.text
-    topMenuEl.appendChild(a); //Append <a> to topMenuEl
+    topMenuEl.appendChild(a); //Append <a> to topMenuEl in DOM
     }
 )
