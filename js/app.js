@@ -1,5 +1,5 @@
 
-// Task 3.0
+// Task 3.0 & Task 5.0
 // Menu data structure
 const menuLinks = [
     {text: "about", href: "/about"},
@@ -237,6 +237,6 @@ subMenuEl.addEventListener('click', function(event){
 
     // Task 6.3
         // Next, subMenuEl's event listener should update the contents of mainEl to the contents of the <a> element, within an <h1>, clicked within subMenuEl.
-    mainEl.innerHTML = "<h1>" + event.target.textContent + "</h1>";
+    mainEl.innerHTML = `<h1>${event.target.textContent}</h1>`; //clicked on a lightbulb in vscode and it converted a concatenation to a template string...cool!
 
 })
