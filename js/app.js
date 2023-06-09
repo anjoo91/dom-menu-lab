@@ -29,7 +29,6 @@ let mainEl = document.querySelector("main");
 
 mainEl.style.backgroundColor = "var(--main-bg)";
 
-
 // Task 1.2
 // Set the content of mainEl to <h1>SEI Rocks!</h1>.
 
@@ -105,6 +104,7 @@ subMenuEl.style.position = "absolute";
 
 // Task 4.5
 // Set the CSS top property of subMenuEl to the value of 0.
+
 subMenuEl.style.top = "0";
 
 // Task 5.1
@@ -178,6 +178,7 @@ topMenuEl.addEventListener("click", function(event) {
     // Otherwise (showingSubMenu is false):
         // Set the CSS top property of subMenuEl to 0.
         // Since the About link has been clicked, set mainEl.innerHTML to "<h1>about</h1>".
+
     if (showingSubMenu) {
         buildSubMenu(linkObject.subLinks);
         subMenuEl.style.top = "100%";
@@ -228,17 +229,20 @@ subMenuEl.addEventListener('click', function(event){
     // Next, subMenuEl's event listener should:
         // Set showingSubMenu to false.
         // Set the CSS top property of subMenuEl to 0.
+
     showingSubMenu = false;
     subMenuEl.style.top = "0";
 
     // Task 6.2
         // Next, subMenuEl's event listener should remove the class name of active from each <a> element in topMenuLinks - whether the active class exists or not.
-    topMenuLinks.forEach(function(topMenuLink) {
+    
+        topMenuLinks.forEach(function(topMenuLink) {
         topMenuLink.classList.remove("active");
     })
 
     // Task 6.3
         // Next, subMenuEl's event listener should update the contents of mainEl to the contents of the <a> element, within an <h1>, clicked within subMenuEl.
+
     mainEl.innerHTML = `<h1>${event.target.textContent}</h1>`; //clicked on a lightbulb in vscode and it converted a concatenation to a template string...cool!
 
 })
